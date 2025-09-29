@@ -67,4 +67,12 @@ public class Sala {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
+
+    public Cine getCine() {
+        return cine;
+    }
+
+    public void setCine(Cine cine) {
+        this.cine = cine;
+    }
 }

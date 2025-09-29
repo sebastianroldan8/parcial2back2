@@ -8,12 +8,11 @@ import org.mapstruct.factory.Mappers;
 
 @Mapper(componentModel = "spring")
 public interface IMapaCineDTO {
-    IMapaCineDTO INSTANCE= Mappers.getMapper(IMapaCineDTO.class);
-
-    // De entidad a DTO
-    CineDTO toDTO(Cine cine);
 
     // De DTO a entidad
-    @Mapping(target = "detalle", ignore = true) // ignoramos relaciones complejas
-    Cine toEntity(CineDTO cineDTO);
+    @Mapping(source = "nombre", target = "nombre")
+    @Mapping(source = "nit", target = "nit")
+    @Mapping(source = "detalle.direccion", target = "direccion")
+
+    CineDTO convertir_a_cineDTO (Cine cine);
 }

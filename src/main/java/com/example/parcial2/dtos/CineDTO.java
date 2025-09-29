@@ -4,15 +4,18 @@ package com.example.parcial2.dtos;
 public class CineDTO {
     private Long id;
     private String nombre;
-    protected String nit;
+    private String nit;
+    private String direccion;
+
 
     public CineDTO() {
     }
 
-    public CineDTO(String nit, String nombre, Long id) {
+    public CineDTO(String nit, String nombre, Long id, String direccion) {
         this.nit = nit;
         this.nombre = nombre;
         this.id = id;
+        this.direccion = direccion;
     }
 
     public String getNit() {
@@ -37,5 +40,13 @@ public class CineDTO {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 }

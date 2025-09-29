@@ -60,4 +60,20 @@ public class Cine {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public DetalleCine getDetalle() {
+        return detalle;
+    }
+
+    public void setDetalle(DetalleCine detalle) {
+        this.detalle = detalle;
+    }
+
+    public List<Sala> getSalas() {
+        return salas;
+    }
+
+    public void setSalas(List<Sala> salas) {
+        this.salas = salas;
+    }
 }
